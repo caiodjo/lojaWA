@@ -8,12 +8,130 @@
   </head>
   <body>
     <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Second navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Loja WA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample02">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Gerenciar produtos</a>
+            </li>
+          </ul>
+          <button class="btn btn-danger">Sair</button>
+        </div>
+      </div>
+    </nav>
     <!-- navbar -->
 
     <!-- gerenciar produtos -->
+    <div class="container mt-5">
+      <div class="row mb-3">
+        <div class="col-12">
+          <h2>Gerenciar Produtos:</h2>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-12">
+          <button class="btn btn-warning ms-auto d-block" data-bs-toggle="modal" data-bs-target="#novoProduto">Novo Poduto</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-light table-striped">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Produto</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Estoque</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Bicileta</td>
+                <td>R$ 1500,00</td>
+                <td>110</td>
+                <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-primary">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Echo dot</td>
+                <td>R$ 300,00</td>
+                <td>8</td>
+                <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-primary">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Air Fryer</td>
+                <td>R$ 400,00</td>
+                <td>10</td>
+                <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-primary">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Celular</td>
+                <td>R$ 2500,00</td>
+                <td class="danger">0</td>
+                <td>
+                  <button class="btn btn-primary">Editar</button>
+                  <button class="btn btn-primary">Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
     <!-- gerenciar produtos -->
 
     <!-- modal cadastrar produtos -->
+    <div class="modal fade" id="novoProduto" tabindex="-1" aria-labelledby="modalTitleLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalTitleLabel">Novo produto</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="inputProduct" class="form-label">Produto</label>
+                <input type="text" class="form-control" id="inputProduct" aria-describedby="produto" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputPrice" class="form-label">Preço</label>
+                <input type="number" class="form-control" id="inputPrice" required>
+              </div>
+              <div class="mb-3">
+                <label for="inputPrice" class="form-label">Preço</label>
+                <input type="number" class="form-control" id="inputPrice" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100" >Confirmar Cadastro</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <!-- modal cadastrar produtos -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
